@@ -154,3 +154,20 @@ a:hover {
 /*------------------------------------------------------
   # Combobox
   ------------------------------------------------------ */
+.combobox__text {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.combobox__item {
+  border: 0;
+  font-size: 1.4rem;
+  font-weight: 600;
+  opacity: 60%;
+  padding-left: 0.5rem;
+}
+
+.combobox__item:focus {
+  outline-width: 0;
+}
