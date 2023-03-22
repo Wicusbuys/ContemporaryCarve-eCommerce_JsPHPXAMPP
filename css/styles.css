@@ -1,3 +1,91 @@
-body{
-    background-color: blue;
+:root {
+  --color-primary: #fff;
+  --color-secondary: #000;
+  --color-accent: #333;
+  --color-white: #fff;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/*------------------------------------------------------
+  >>>>TABLE OF CONTENTS:
+  --------------------------------------------------------
+  # Typography
+  # 
+  ------------------------------------------------------*/
+
+/*------------------------------------------------------
+  # Typography
+  ------------------------------------------------------ */
+
+html {
+  /* 62.5% of 16px = 10px*/
+  font-size: 62.5%;
+  scroll-behavior: smooth !important;
+  height: 100%;
+}
+
+body {
+  background: var(--color-primary);
+  font-family: "Didact Gothic", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 2.1rem;
+  letter-spacing: 0.1rem;
+  z-index: 1;
+  height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--color-secondary);
+  margin: 2.5rem auto;
+  line-height: 1.1;
+  letter-spacing: 0.2rem;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 3rem;
+}
+
+p {
+  margin-top: 0;
+  color: var(--color-secondary);
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 2rem;
+  }
+
+  h1 {
+    font-size: 7rem;
+  }
+
+  h2 {
+    font-size: 5rem;
+  }
+
+  h3 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-size: 2rem;
+  }
 }
