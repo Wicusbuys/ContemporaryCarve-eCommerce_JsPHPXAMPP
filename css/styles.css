@@ -1,7 +1,7 @@
 :root {
   --color-primary: #fff;
   --color-secondary: #000;
-  --color-accent: #333;
+  --color-accent: #505050;
   --color-white: #fff;
 }
 
@@ -16,6 +16,7 @@
   --------------------------------------------------------
   # Typography
   # Links
+  # Lists
   ------------------------------------------------------*/
 
 /*------------------------------------------------------
@@ -127,3 +128,29 @@ a:hover {
     padding: 3px;
   }
 }
+
+/*------------------------------------------------------
+  # Lists
+  ------------------------------------------------------ */
+
+.list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list__item {
+  padding: 0.5rem 0;
+}
+
+.list--vertical .list__item {
+  color: var(--color-accent);
+  font-size: 1.4rem;
+}
+
+.list--inline .list__item {
+  display: inline-block;
+}
+
+/*------------------------------------------------------
+  # Combobox
+  ------------------------------------------------------ */
