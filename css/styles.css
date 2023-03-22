@@ -15,7 +15,7 @@
   >>>>TABLE OF CONTENTS:
   --------------------------------------------------------
   # Typography
-  # 
+  # Links
   ------------------------------------------------------*/
 
 /*------------------------------------------------------
@@ -26,7 +26,6 @@ html {
   /* 62.5% of 16px = 10px*/
   font-size: 62.5%;
   scroll-behavior: smooth !important;
-  height: 100%;
 }
 
 body {
@@ -87,5 +86,44 @@ p {
 
   p {
     font-size: 2rem;
+  }
+}
+
+/*------------------------------------------------------
+  # Links
+  ------------------------------------------------------ */
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  opacity: 60%;
+}
+
+.link {
+  color: var(--color-secondary);
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.link-arrow {
+  border: solid black;
+  border-width: 0 4px 4px 0;
+  display: inline-block;
+  padding: 4px;
+  margin-left: 5px;
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 1024px) {
+  .link {
+    font-size: 1.6rem;
+  }
+
+  .link-arrow {
+    padding: 3px;
   }
 }
