@@ -17,6 +17,7 @@
   # Typography
   # Links
   # Lists
+  # Icon
   ------------------------------------------------------*/
 
 /*------------------------------------------------------
@@ -170,4 +171,25 @@ a:hover {
 
 .combobox__item:focus {
   outline-width: 0;
+}
+
+/*------------------------------------------------------
+  # Icon
+  ------------------------------------------------------ */
+
+.icon {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  opacity: 60%;
+}
+
+@media screen and (min-width: 1024px) {
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
 }
