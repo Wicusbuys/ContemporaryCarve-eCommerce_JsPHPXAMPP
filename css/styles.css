@@ -18,6 +18,7 @@
   # Links
   # Lists
   # Icon
+  # Buttons
   ------------------------------------------------------*/
 
 /*------------------------------------------------------
@@ -192,4 +193,18 @@ a:hover {
     width: 30px;
     height: 30px;
   }
+}
+
+/*------------------------------------------------------
+  # Buttons
+  ------------------------------------------------------ */
+
+.btn {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  padding: 1.4rem 2.4rem;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  border-width: 0;
+  cursor: pointer;
 }
