@@ -21,6 +21,7 @@
   # Icon
   # Buttons
   # Inputs
+  # Tile
   ------------------------------------------------------*/
 
 /*------------------------------------------------------
@@ -188,6 +189,11 @@ a:hover {
   vertical-align: text-bottom;
 }
 
+.icon--tile {
+  float: right;
+  margin: 1rem;
+}
+
 .icon:hover {
   opacity: 60%;
 }
@@ -231,5 +237,33 @@ a:hover {
   display: inline-block;
 }
 
-.input-group .input {
+.input-group .link {
+  font-size: 1.6rem;
+}
+
+/*------------------------------------------------------
+  # Tile
+  ------------------------------------------------------ */
+
+.tile {
+  box-shadow: 0 0 20px 10px #e2e2e2;
+  width: 20%;
+  display: inline-block;
+}
+
+.tile__image {
+  width: 100%;
+}
+
+.tile__info {
+  padding: 2rem 1.5rem 0;
+}
+
+.tile__header {
+  width: 100%;
+  padding-bottom: 1rem;
+}
+
+.tile__price {
+  width: 100%;
 }
