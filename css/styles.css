@@ -2,6 +2,7 @@
   --color-primary: #fff;
   --color-secondary: #000;
   --color-accent: #505050;
+  --color-input: #f9f9f9;
   --color-white: #fff;
 }
 
@@ -19,6 +20,7 @@
   # Lists
   # Icon
   # Buttons
+  # Inputs
   ------------------------------------------------------*/
 
 /*------------------------------------------------------
@@ -99,6 +101,7 @@ p {
 a {
   text-decoration: none;
   transition: 0.3s;
+  padding-right: 4px;
 }
 
 a:hover {
@@ -182,6 +185,7 @@ a:hover {
   width: 24px;
   height: 24px;
   cursor: pointer;
+  vertical-align: text-bottom;
 }
 
 .icon:hover {
@@ -207,4 +211,25 @@ a:hover {
   background-color: var(--color-primary);
   border-width: 0;
   cursor: pointer;
+}
+
+/*------------------------------------------------------
+  # inputs
+  ------------------------------------------------------ */
+
+.input {
+  background-color: var(--color-input);
+  border: 0;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  outline: 0;
+}
+
+.input-group {
+  background-color: var(--color-input);
+  border: 0;
+  display: inline-block;
+}
+
+.input-group .input {
 }
