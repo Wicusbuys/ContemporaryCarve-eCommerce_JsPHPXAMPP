@@ -318,7 +318,7 @@ a:hover {
 .space__body {
   color: var(--color-primary);
   position: absolute;
-  width: 100%;
+  text-align: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
