@@ -23,6 +23,8 @@
   # Inputs
   # Tile
   # Space
+  # Grids
+  # Blocks
   ------------------------------------------------------*/
 
 /*------------------------------------------------------
@@ -364,4 +366,25 @@ a:hover {
   .grid--1x3__contact {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+/*------------------------------------------------------
+# Blocks
+------------------------------------------------------ */
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.container__heading {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.block {
+  padding-top: 3rem;
+}
+
+.block__heading {
+  text-align: center;
 }
