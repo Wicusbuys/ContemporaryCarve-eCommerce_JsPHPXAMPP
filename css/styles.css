@@ -328,3 +328,40 @@ a:hover {
   letter-spacing: 1rem;
   font-size: 4rem;
 }
+
+/*------------------------------------------------------
+# Grids
+------------------------------------------------------ */
+
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid--1x2__about {
+    grid-template-columns: 0.5fr 1fr;
+    column-gap: 2rem;
+  }
+
+  .grid--1x2__contact__message {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid--1x3__interest {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .grid--1x3__contact {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
