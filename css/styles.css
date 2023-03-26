@@ -569,3 +569,25 @@ a:hover {
     transform: none;
   }
 }
+
+/*------------------------------------------------------
+# Small about
+------------------------------------------------------ */
+
+.small--about {
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.small--about__heading {
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.small--about__body {
+  font-size: 1.6rem;
+}
+
+.small--about__link {
+  font-size: 1.6rem;
+}
