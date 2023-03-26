@@ -25,6 +25,8 @@
   # Space
   # Grids
   # Blocks
+  # Collapsibles
+  # Navbar
   ------------------------------------------------------*/
 
 /*------------------------------------------------------
@@ -387,4 +389,122 @@ a:hover {
 
 .block__heading {
   text-align: center;
+}
+
+/*------------------------------------------------------
+# Collapsibles
+------------------------------------------------------ */
+
+.collapsible__content {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+/*------------------------------------------------------
+# NavBar
+------------------------------------------------------ */
+
+.nav {
+  background: grey;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 1rem;
+  align-items: center;
+}
+
+.nav__logo {
+  width: 150px;
+}
+
+.nav__list--mobile {
+  display: inline-block;
+}
+
+.nav__list--pc {
+  display: none;
+}
+
+.nav__icons {
+  padding: 0 1rem;
+}
+
+.nav__toggler {
+  width: 30px;
+  height: 30px;
+}
+
+.nav__icon {
+  width: 30px;
+  height: 30px;
+}
+
+.nav__list {
+  width: 100%;
+  margin: 0;
+}
+
+.nav__item {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--color-accent);
+}
+
+.nav__item:last-of-type {
+  border: 0;
+}
+
+.nav__item > a {
+  color: var(--color-secondary);
+  transition: 0.3s;
+}
+
+.nav__item > a:hover {
+  opacity: 60%;
+}
+
+@media screen and (min-width: 900px) {
+  .nav__toggler {
+    display: none;
+  }
+
+  .nav__list {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    max-height: 100%;
+    opacity: 1;
+  }
+
+  .nav__item {
+    border: 2px solid transparent;
+    transition: border-bottom 0.3s ease-in-out;
+  }
+
+  .nav__item:hover {
+    border-bottom: 2px solid var(--color-accent);
+    transition: border-bottom 0.4s;
+  }
+
+  .nav__list--mobile {
+    display: none;
+  }
+
+  .nav__list--pc {
+    display: inline-block;
+  }
+
+  .nav__list {
+    margin: 0 auto;
+  }
+
+  .nav__icon {
+    justify-content: space-between;
+  }
 }
