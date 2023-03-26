@@ -264,13 +264,16 @@ a:hover {
 
 .tile {
   box-shadow: 0 0 20px 10px #e2e2e2;
-  width: 20%;
+  width: auto;
+  max-width: 250px;
   display: inline-block;
   min-width: 150px;
+  margin: auto;
 }
 
 .tile__image {
   width: 100%;
+  object-fit: fill;
 }
 
 .tile__info {
@@ -284,6 +287,11 @@ a:hover {
 
 .tile__price {
   width: 100%;
+}
+
+.tile__icon {
+  padding: 1rem 1rem;
+  text-align: end;
 }
 
 /*------------------------------------------------------
@@ -346,19 +354,19 @@ a:hover {
   display: grid;
 }
 
+.grid--1x4 {
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 4rem;
+  row-gap: 8rem;
+  margin: 0 6rem;
+}
+
 @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 4rem;
-    row-gap: 4rem;
   }
 
-  .grid--1x2__about {
-    grid-template-columns: 0.5fr 1fr;
-    column-gap: 2rem;
-  }
-
-  .grid--1x2__contact__message {
+  .grid--1x4 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -368,12 +376,14 @@ a:hover {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .grid--1x3__interest {
+  .grid--1x4 {
     grid-template-columns: repeat(3, 1fr);
   }
+}
 
-  .grid--1x3__contact {
-    grid-template-columns: repeat(3, 1fr);
+@media screen and (min-width: 1300px) {
+  .grid--1x4 {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -604,4 +614,19 @@ a:hover {
 
 .space--Section {
   padding: 2rem;
+}
+
+/*------------------------------------------------------
+# Best Sellers
+------------------------------------------------------ */
+
+.bestSellers {
+  padding-top: 2rem;
+}
+
+.bestSellers__heading {
+  text-transform: uppercase;
+  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 6rem;
 }
