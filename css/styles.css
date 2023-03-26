@@ -27,6 +27,7 @@
   # Blocks
   # Collapsibles
   # Navbar
+  # Hero
   ------------------------------------------------------*/
 
 /*------------------------------------------------------
@@ -506,5 +507,65 @@ a:hover {
 
   .nav__icon {
     justify-content: space-between;
+  }
+}
+
+/*------------------------------------------------------
+# Hero
+------------------------------------------------------ */
+
+.hero {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  padding: 0;
+}
+
+.hero__image {
+  display: block;
+  background-image: url(/images/modern_contemporary_coffee_table.jpg);
+  aspect-ratio: 2.25;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero__content {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+}
+
+.hero__tagline {
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.hero__heading {
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin: 1rem 0 4rem;
+  font-weight: 500;
+}
+
+.hero__btn {
+  text-transform: uppercase;
+  padding: 1.4rem 4rem;
+  letter-spacing: 0.5rem;
+}
+
+@media screen and (min-width: 756px) {
+  .hero__content {
+    position: absolute;
+    padding: 0 24px;
+    top: auto;
+    bottom: 10rem;
+    text-align: left;
+    transform: none;
   }
 }
