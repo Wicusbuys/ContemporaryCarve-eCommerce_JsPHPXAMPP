@@ -271,7 +271,8 @@ a:hover {
 .tile {
   box-shadow: 0 0 20px 10px #e2e2e2;
   width: auto;
-  max-width: 250px;
+  max-width: 300px;
+  height: 400px;
   display: inline-block;
   min-width: 150px;
   margin: auto;
@@ -279,6 +280,7 @@ a:hover {
 
 .tile__image {
   width: 100%;
+  height: 250px;
   object-fit: fill;
 }
 
@@ -296,7 +298,8 @@ a:hover {
 }
 
 .tile__icon {
-  padding: 1rem 1rem;
+  padding: 2rem 1rem;
+  height: auto;
   text-align: end;
 }
 
@@ -349,7 +352,13 @@ a:hover {
   padding-bottom: 2rem;
   text-transform: uppercase;
   letter-spacing: 1rem;
-  font-size: 4rem;
+  font-size: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .space__header {
+    font-size: 4rem;
+  }
 }
 
 /*------------------------------------------------------
@@ -358,6 +367,7 @@ a:hover {
 
 .grid {
   display: grid;
+  row-gap: 6rem;
 }
 
 .grid--1x4 {
@@ -370,6 +380,8 @@ a:hover {
 @media screen and (min-width: 768px) {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    row-gap: 8rem;
   }
   .grid--1x3 {
     grid-template-columns: repeat(2, 1fr);
@@ -438,7 +450,6 @@ a:hover {
 ------------------------------------------------------ */
 
 .nav {
-  background: grey;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -601,6 +612,7 @@ a:hover {
 
 .small--about {
   padding: 3rem 2rem;
+  margin-top: 8rem;
   text-align: center;
 }
 
@@ -623,6 +635,7 @@ a:hover {
 
 .space--Section {
   padding: 2rem;
+  margin-top: 8rem;
 }
 
 /*------------------------------------------------------
@@ -631,6 +644,7 @@ a:hover {
 
 .bestSellers {
   padding-top: 2rem;
+  margin-top: 8rem;
 }
 
 .bestSellers__heading {
@@ -645,11 +659,12 @@ a:hover {
 ------------------------------------------------------ */
 
 .newsletter {
-  background-image: url(/images/modern_contemporary_coffee_table.jpg);
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(/images/modern_contemporary_coffee_table.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  margin: 0;
+  margin-top: 8rem;
 }
 
 .newsletter__content {
@@ -694,7 +709,8 @@ a:hover {
 ------------------------------------------------------ */
 
 .footer {
-  border-top: 1px solid var(--color-secondary);
+  margin-top: 8rem;
+  border-top: 1px solid var(--color-about);
 }
 
 .footer__about {

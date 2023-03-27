@@ -16,46 +16,248 @@
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-    <section class="footer">
-      <div class="grid grid--1x3">
-        <div class="footer__about">
-          <h3 class="footer__about--heading">The Contemporary carve way</h3>
-          <p class="footer__about--body">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
-            vitae laudantium dolores nostrum eos quis enim voluptas optio amet
-            voluptatibus ea dicta iusto ab consequatur, illo rem, voluptatem
-            alias incidunt?
-          </p>
-          <div class="footer__about--icons">
-            <svg class="icon footer__about--icon">
-              <use xlink:href="images/sprite.svg#linkedin"></use>
+    <header>
+      <nav class="nav collapsible">
+        <a class="nav__logo" href="#"><img src="images/logo.svg" alt="" /></a>
+        <ul class="list list--inline nav__list--mobile">
+          <li class="list__item nav__icons">
+            <svg class="icon nav__icon">
+              <use xlink:href="images/sprite.svg#account"></use>
             </svg>
-            <svg class="icon footer__about--icon">
-              <use xlink:href="images/sprite.svg#mail"></use>
+          </li>
+          <li class="list__item nav__icons">
+            <svg class="icon nav__icon">
+              <use xlink:href="images/sprite.svg#search"></use>
             </svg>
-            <svg class="icon footer__about--icon">
-              <use xlink:href="images/sprite.svg#whatsapp"></use>
+          </li>
+          <li class="list__item nav__icons">
+            <svg class="icon nav__icon">
+              <use xlink:href="images/sprite.svg#shoppingCart"></use>
             </svg>
-          </div>
-        </div>
-        <div class="footer__products">
-          <h3 class="footer__products--heading">Products</h3>
-          <ul class="list list--vertical footer__products--list">
-            <li class="list__item footer__products--list__item">Dining</li>
-            <li class="list__item footer__products--list__item">Living</li>
-            <li class="list__item footer__products--list__item">Bedroom</li>
-            <li class="list__item footer__products--list__item">Outdoor</li>
-          </ul>
-        </div>
-        <div class="footer__company">
-          <h3 class="footer__company--heading">Products</h3>
-          <ul class="list list--vertical footer__company--list">
-            <li class="list__item footer__company--list__item">About</li>
-            <li class="list__item footer__company--list__item">Contact</li>
-          </ul>
+          </li>
+          <li class="list__item nav__icons">
+            <svg class="icon nav__toggler">
+              <use xlink:href="images/sprite.svg#burger"></use>
+            </svg>
+          </li>
+        </ul>
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item"><a href="#">Home</a></li>
+          <li class="nav__item"><a href="#">Shop</a></li>
+          <li class="nav__item"><a href="#">About</a></li>
+          <li class="nav__item"><a href="#">Contact</a></li>
+        </ul>
+        <ul class="list list--inline nav__list--pc">
+          <li class="list__item nav__icons">
+            <svg class="icon nav__icon">
+              <use xlink:href="images/sprite.svg#account"></use>
+            </svg>
+          </li>
+          <li class="list__item nav__icons">
+            <svg class="icon nav__icon">
+              <use xlink:href="images/sprite.svg#search"></use>
+            </svg>
+          </li>
+          <li class="list__item nav__icons">
+            <svg class="icon nav__icon">
+              <use xlink:href="images/sprite.svg#shoppingCart"></use>
+            </svg>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="block hero">
+      <div class="hero__image">
+        <div class="hero__content">
+          <p class="hero__tagline">Innovative, timeless, handcrafted</p>
+          <h3 class="hero__heading">Furniture made for living</h2>
+          <button class="btn hero__btn">Shop by space</button>
         </div>
       </div>
-    </section>
+  </section>
+  <section class="block container__heading small--about">
+    <heading class="block__heading">
+      <h3 class="small--about__heading">Contemporary Carve</h3>
+      <p class="small--about__body">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi velit
+        veritatis voluptates distinctio totam libero laudantium error? Asperiores,
+        non repellat.
+      </p>
+      <a href="" class="link small--about__link"
+        >Get to know us <i class="link-arrow"></i
+      ></a>
+    </heading>
+  </section>
+  <section class="space--Section">
+    <div class="container grid grid--1x2">
+      <div class="space">
+        <img class="space__image" src="images/modern_contemporary_coffee_table.jpg" alt="">
+          <div class="space__body">
+            <header class="space__header">Dining</header>
+            <span href="" class="link link--space"
+              >browse <i class="link-arrow"></i
+            ></span>
+          </div>
+        </img>
+      </div>
+      <div class="space">
+        <img class="space__image" src="images/modern_contemporary_coffee_table.jpg" alt="">
+          <div class="space__body">
+            <header class="space__header">Living</header>
+            <span href="" class="link link--space"
+              >browse <i class="link-arrow"></i
+            ></span>
+          </div>
+        </img>
+      </div>
+      <div class="space">
+        <img class="space__image" src="images/modern_contemporary_coffee_table.jpg" alt="">
+          <div class="space__body">
+            <header class="space__header">Bedroom</header>
+            <span href="" class="link link--space"
+              >browse <i class="link-arrow"></i
+            ></span>
+          </div>
+        </img>
+      </div>
+      <div class="space">
+        <img class="space__image" src="images/modern_contemporary_coffee_table.jpg" alt="">
+          <div class="space__body">
+            <header class="space__header">Outdoor</header>
+            <span href="" class="link link--space"
+              >browse <i class="link-arrow"></i
+            ></span>
+          </div>
+        </img>
+      </div>
+    </div>      
+  </section>
+  <section class="block newsletter">
+    <div class="newsletter__content">
+      <heading class="block__heading">
+        <h3 class="newsletter__heading">Contemporary Carve</h3>
+        <p class="newsletter__body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi velit
+          veritatis voluptates distinctio totam libero laudantium error? Asperiores,
+          non repellat.
+        </p>
+      <div class="newsletter__input">
+        <input type="text" class="input newsletter__email" placeholder="Email..." />
+        <button class="btn newsletter__btn">Submit</button>
+      </div>
+            </div>
+    </div>
+</section> 
+<section class="bestSellers">
+  <h3 class="bestSellers__heading">Best sellers</h3>
+  <div class="grid grid--1x4">
+    <div class="tile">
+      <img
+        class="tile__image"
+        src="images/modern_contemporary_coffee_table.jpg"
+        alt=""
+      />
+      <div class="tile__info">
+        <header class="tile__header">Coffee Table</header>
+        <div class="tile__price">R2,465.50</div>
+      </div>
+      <div class="tile__icon">
+        <svg class="icon">
+          <use xlink:href="images/sprite.svg#shoppingCart"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="tile">
+      <img
+        class="tile__image"
+        src="images/modern_contemporary_coffee_table.jpg"
+        alt=""
+      />
+      <div class="tile__info">
+        <header class="tile__header">Coffee Table</header>
+        <div class="tile__price">R2,465.50</div>
+      </div>
+      <div class="tile__icon">
+        <svg class="icon">
+          <use xlink:href="images/sprite.svg#shoppingCart"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="tile">
+      <img
+        class="tile__image"
+        src="images/modern_contemporary_coffee_table.jpg"
+        alt=""
+      />
+      <div class="tile__info">
+        <header class="tile__header">Coffee Table</header>
+        <div class="tile__price">R2,465.50</div>
+      </div>
+      <div class="tile__icon">
+        <svg class="icon">
+          <use xlink:href="images/sprite.svg#shoppingCart"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="tile">
+      <img
+        class="tile__image"
+        src="images/modern_contemporary_coffee_table.jpg"
+        alt=""
+      />
+      <div class="tile__info">
+        <header class="tile__header">Coffee Table</header>
+        <div class="tile__price">R2,465.50</div>
+      </div>
+      <div class="tile__icon">
+        <svg class="icon">
+          <use xlink:href="images/sprite.svg#shoppingCart"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section> 
+<section class="footer">
+  <div class="grid grid--1x3">
+    <div class="footer__about">
+      <h3 class="footer__about--heading">The Contemporary carve way</h3>
+      <p class="footer__about--body">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita vitae
+        laudantium dolores nostrum eos quis enim voluptas optio amet
+        voluptatibus ea dicta iusto ab consequatur, illo rem, voluptatem alias
+        incidunt?
+      </p>
+      <div class="footer__about--icons">
+        <svg class="icon footer__about--icon">
+          <use xlink:href="images/sprite.svg#linkedin"></use>
+        </svg>
+        <svg class="icon footer__about--icon">
+          <use xlink:href="images/sprite.svg#mail"></use>
+        </svg>
+        <svg class="icon footer__about--icon">
+          <use xlink:href="images/sprite.svg#whatsapp"></use>
+        </svg>
+      </div>
+    </div>
+    <div class="footer__products">
+      <h3 class="footer__products--heading">Products</h3>
+      <ul class="list list--vertical footer__products--list">
+        <li class="list__item footer__products--list__item">Dining</li>
+        <li class="list__item footer__products--list__item">Living</li>
+        <li class="list__item footer__products--list__item">Bedroom</li>
+        <li class="list__item footer__products--list__item">Outdoor</li>
+      </ul>
+    </div>
+    <div class="footer__company">
+      <h3 class="footer__company--heading">Products</h3>
+      <ul class="list list--vertical footer__company--list">
+        <li class="list__item footer__company--list__item">About</li>
+        <li class="list__item footer__company--list__item">Contact</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
     <script src="js/main.js"></script>
   </body>
 </html>
