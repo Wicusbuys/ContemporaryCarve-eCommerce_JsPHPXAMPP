@@ -4,6 +4,7 @@
   --color-accent: #505050;
   --color-input: #f9f9f9;
   --color-white: #fff;
+  --color-about: #757575;
 }
 
 *,
@@ -370,6 +371,9 @@ a:hover {
   .grid--1x2 {
     grid-template-columns: repeat(2, 1fr);
   }
+  .grid--1x3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   .grid--1x4 {
     grid-template-columns: repeat(2, 1fr);
@@ -642,7 +646,8 @@ a:hover {
 
 .newsletter {
   background-image: url(/images/modern_contemporary_coffee_table.jpg);
-  object-fit: fill;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
   margin: 0;
 }
@@ -682,4 +687,94 @@ a:hover {
   display: block;
   margin: 1rem auto;
   letter-spacing: 0.5rem;
+}
+
+/*------------------------------------------------------
+# Footer
+------------------------------------------------------ */
+
+.footer {
+  border-top: 1px solid var(--color-secondary);
+}
+
+.footer__about {
+  padding: 1rem 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.footer__about--heading {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.footer__about--body {
+  font-size: 1.6rem;
+  color: var(--color-about);
+  line-height: 2.4rem;
+}
+
+.footer__about--icons {
+  display: flex;
+  justify-content: center;
+}
+
+.footer__about--icon {
+  fill: var(--color-about);
+  margin: 1rem 2rem;
+  width: 24px;
+  height: 24px;
+}
+
+.footer__products {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.footer__products--heading {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.footer__products--list {
+  margin: 0;
+}
+
+.footer__products--list__item {
+  padding-bottom: 2rem;
+}
+
+.footer__company {
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.footer__company--heading {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.footer__company--list {
+  margin: 0;
+}
+
+.footer__company--list__item {
+  padding-bottom: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .footer__about {
+    padding: 1rem 2rem;
+    text-align: left;
+  }
+
+  .footer__about--icons {
+    justify-content: left;
+  }
 }
