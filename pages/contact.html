@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contemporary Carve</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="nav collapsible">
+        <a class="nav__logo" href="#"><img src="/images/logo.svg" alt="" /></a>
+        <ul class="list list--inline nav__list--mobile">
+          <li class="list__item nav__icons">
+            <svg class="icon nav__icon">
+              <use xlink:href="/images/sprite.svg#account"></use>
+            </svg>
+          </li>
+          <li class="list__item nav__icons">
+            <svg class="icon nav__icon">
+              <use xlink:href="/images/sprite.svg#search"></use>
+            </svg>
+          </li>
+          <li class="list__item nav__icons">
+            <svg class="icon nav__icon">
+              <use xlink:href="/images/sprite.svg#shoppingCart"></use>
+            </svg>
+          </li>
+          <li class="list__item nav__icons">
+            <svg class="icon nav__toggler">
+              <use xlink:href="/images/sprite.svg#burger"></use>
+            </svg>
+          </li>
+        </ul>
+        <ul class="list nav__list collapsible__content">
+          <li class="nav__item"><a href="#">Home</a></li>
+          <li class="nav__item"><a href="#">Shop</a></li>
+          <li class="nav__item"><a href="#">About</a></li>
+          <li class="nav__item"><a href="#">Contact</a></li>
+        </ul>
+        <ul class="list list--inline nav__list--pc">
+          <li class="list__item nav__icons">
+            <svg class="icon nav__icon">
+              <use xlink:href="/images/sprite.svg#account"></use>
+            </svg>
+          </li>
+          <li class="list__item nav__icons">
+            <svg class="icon nav__icon">
+              <use xlink:href="/images/sprite.svg#search"></use>
+            </svg>
+          </li>
+          <li class="list__item nav__icons">
+            <svg class="icon nav__icon">
+              <use xlink:href="/images/sprite.svg#shoppingCart"></use>
+            </svg>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <section class="contact">
+      <h3>Contact</h3>
+      <div class="contact__info">
+        Enter your details and message below and we will get back to you.
+      </div>
+      <div class="contact__info">
+        Alternatively give us a call or send us a mail for a general or sales
+        enquiry.
+      </div>
+      <div class="contact__info">Office: 083 471 7822</div>
+      <div class="contact__info">Email: wicusbuys@gmail.com</div>
+      <div class="contact__info">Workshop visits by appointment only:</div>
+      <div class="contact__info">
+        Workshop address: Kaapzicht Building, 9 Rogers St, Tyger Valley, Cape
+        Town, 7530
+      </div>
+      <div class="contact__inputs">
+        <div class="grid grid--1x2 contact__grid">
+          <div class="contact__input">
+            <input
+              type="text"
+              class="input contact__name"
+              placeholder="Name..."
+            />
+          </div>
+          <div class="contact__input">
+            <input
+              type="text"
+              class="input contact__email"
+              placeholder="Email..."
+            />
+          </div>
+        </div>
+        <div class="contact__input">
+          <textarea
+            class="input contact__message"
+            name="message"
+            cols="30"
+            rows="10"
+            placeholder="Your message..."
+          ></textarea>
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="grid grid--1x3">
+        <div class="footer__about">
+          <h3 class="footer__about--heading">The Contemporary carve way</h3>
+          <p class="footer__about--body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+            vitae laudantium dolores nostrum eos quis enim voluptas optio amet
+            voluptatibus ea dicta iusto ab consequatur, illo rem, voluptatem
+            alias incidunt?
+          </p>
+          <div class="footer__about--icons">
+            <svg class="icon footer__about--icon">
+              <use xlink:href="images/sprite.svg#linkedin"></use>
+            </svg>
+            <svg class="icon footer__about--icon">
+              <use xlink:href="images/sprite.svg#mail"></use>
+            </svg>
+            <svg class="icon footer__about--icon">
+              <use xlink:href="images/sprite.svg#whatsapp"></use>
+            </svg>
+          </div>
+        </div>
+        <div class="footer__products">
+          <h3 class="footer__products--heading">Products</h3>
+          <ul class="list list--vertical footer__products--list">
+            <li class="list__item footer__products--list__item">Dining</li>
+            <li class="list__item footer__products--list__item">Living</li>
+            <li class="list__item footer__products--list__item">Bedroom</li>
+            <li class="list__item footer__products--list__item">Outdoor</li>
+          </ul>
+        </div>
+        <div class="footer__company">
+          <h3 class="footer__company--heading">Products</h3>
+          <ul class="list list--vertical footer__company--list">
+            <li class="list__item footer__company--list__item">About</li>
+            <li class="list__item footer__company--list__item">Contact</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
