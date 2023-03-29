@@ -33,6 +33,9 @@
   # Space Section
   # Best Sellers
   # Newsletter
+  # Footer
+  # Contact
+  # About
   ------------------------------------------------------*/
 
 /*------------------------------------------------------
@@ -455,6 +458,7 @@ a:hover {
   flex-wrap: wrap;
   background-color: var(--color-primary);
   padding: 1rem;
+  font-size: 2rem;
   align-items: center;
   position: fixed;
   top: 0;
@@ -809,7 +813,7 @@ a:hover {
 ------------------------------------------------------ */
 
 .contact {
-  margin: 12rem auto 4rem;
+  margin: 4rem auto 4rem;
   padding: 4rem;
   text-align: center;
 }
@@ -833,5 +837,75 @@ a:hover {
   margin: 0 auto;
 }
 
-.contact__message {
+/*------------------------------------------------------
+# About
+------------------------------------------------------ */
+
+.about {
+  width: 100%;
+  margin-top: 9rem;
+}
+
+.about__container {
+  width: 100%;
+  position: relative;
+}
+
+.about__img {
+  width: 100%;
+  height: 50vh;
+  object-fit: cover;
+}
+
+.about__img--body {
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+  font-weight: 500;
+  position: absolute;
+  left: 4rem;
+  bottom: 4rem;
+}
+
+.about__story {
+  text-align: center;
+  padding: 4rem;
+}
+
+.about__story--body {
+  line-height: 3rem;
+  max-width: 600px;
+  padding: 4rem;
+  margin: auto;
+}
+
+.biography {
+  text-align: center;
+}
+
+.biography__grid {
+  grid-template-columns: repeat(1, 1fr);
+  row-gap: 10rem;
+}
+
+.biography__image {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.biography__body {
+  text-align: left;
+  max-width: 600px;
+  font-size: 2rem;
+  line-height: 4rem;
+  margin: auto;
+  padding: 0 6rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .biography__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
