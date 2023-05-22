@@ -276,7 +276,7 @@ a:hover {
 .tile {
   box-shadow: 0 0 20px 10px #e2e2e2;
   width: auto;
-  max-width: 300px;
+  max-width: 350px;
   height: 400px;
   display: inline-block;
   min-width: 150px;
@@ -284,7 +284,7 @@ a:hover {
 }
 
 .tile__image {
-  width: 100%;
+  width: 320px;
   height: 250px;
   object-fit: fill;
 }
@@ -295,10 +295,12 @@ a:hover {
 
 .tile__header {
   width: 100%;
+  font-size: 2.4rem;
   padding-bottom: 1rem;
 }
 
 .tile__price {
+  font-size: 2.4rem;
   width: 100%;
 }
 
@@ -382,7 +384,9 @@ a:hover {
   .grid--1x3 {
     grid-template-columns: repeat(2, 1fr);
   }
+}
 
+@media screen and (min-width: 850px) {
   .grid--1x4 {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -394,11 +398,17 @@ a:hover {
   }
 
   .grid--1x4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .grid--1x4 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1600px) {
   .grid--1x4 {
     grid-template-columns: repeat(4, 1fr);
   }
