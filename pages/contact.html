@@ -91,32 +91,35 @@
         Workshop address: Kaapzicht Building, 9 Rogers St, Tyger Valley, Cape
         Town, 7530
       </div>
-      <div class="contact__inputs">
-        <div class="grid grid--1x2 contact__grid">
-          <div class="contact__input">
-            <input
-              type="text"
-              class="input contact__name"
-              placeholder="Name..."
-            />
+      <form action="">
+        <div class="contact__inputs">
+          <div class="grid grid--1x2 contact__grid">
+            <div class="contact__input">
+              <input
+                type="text"
+                class="input contact__name"
+                placeholder="Name..."
+              />
+            </div>
+            <div class="contact__input">
+              <input
+                type="text"
+                class="input contact__email"
+                placeholder="Email..."
+              />
+            </div>
           </div>
           <div class="contact__input">
-            <input
-              type="text"
-              class="input contact__email"
-              placeholder="Email..."
-            />
+            <textarea
+              class="input contact__message"
+              name="message"
+              cols="30"
+              rows="10"
+              placeholder="Your message..."
+            ></textarea>
           </div>
-        </div>
-        <div class="contact__input">
-          <textarea
-            class="input contact__message"
-            name="message"
-            cols="30"
-            rows="10"
-            placeholder="Your message..."
-          ></textarea>
-        </div>
+          <button class="btn contact__btn" type="submit">Submit</button>
+      </form>
       </div>
     </section>
     <section class="footer">

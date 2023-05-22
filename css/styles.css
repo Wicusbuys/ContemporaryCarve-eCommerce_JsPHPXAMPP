@@ -5,6 +5,7 @@
   --color-input: #f9f9f9;
   --color-white: #fff;
   --color-about: #757575;
+  --color-background: #eeeeee;
 }
 
 *,
@@ -36,6 +37,7 @@
   # Footer
   # Contact
   # About
+  # Shop
   ------------------------------------------------------*/
 
 /*------------------------------------------------------
@@ -49,7 +51,7 @@ html {
 }
 
 body {
-  background: var(--color-primary);
+  background: var(--color-background);
   font-family: "Didact Gothic", sans-serif;
   font-size: 1.6rem;
   font-weight: 500;
@@ -316,6 +318,7 @@ a:hover {
   aspect-ratio: 2;
   position: relative;
   cursor: pointer;
+  transition: background-color 0.5s;
 }
 
 .space__image {
@@ -323,32 +326,18 @@ a:hover {
   height: 100%;
   object-fit: cover;
   object-position: center;
-}
-
-.space::after {
-  content: "\A";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgb(0, 0, 0);
-  opacity: 0;
-  transition: all 0.5s;
-}
-
-.space:hover::after {
-  opacity: 0.3;
+  transition: filter 0.5s;
 }
 
 .space__body {
   color: var(--color-primary);
   position: absolute;
   text-align: center;
-  width: 100%;
+  width: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
 .space__header {
@@ -356,6 +345,10 @@ a:hover {
   text-transform: uppercase;
   letter-spacing: 1rem;
   font-size: 3rem;
+}
+
+.space:hover .space__image {
+  filter: brightness(60%);
 }
 
 @media screen and (min-width: 768px) {
@@ -456,7 +449,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  background-color: var(--color-primary);
+  background-color: var(--color-background);
   padding: 1rem;
   font-size: 2rem;
   align-items: center;
@@ -572,7 +565,7 @@ a:hover {
 
 .hero__image {
   display: block;
-  background-image: url(/images/modern_contemporary_coffee_table.jpg);
+  background-image: url(/images/HeroImage.webp);
   aspect-ratio: 2.25;
   width: 100%;
   height: 100%;
@@ -672,12 +665,13 @@ a:hover {
 ------------------------------------------------------ */
 
 .newsletter {
-  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-    url(/images/modern_contemporary_coffee_table.jpg);
+  background: url(/images/NewsletterImage.webp);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   width: 100%;
-  margin-top: 8rem;
+  margin-top: 10rem;
+  padding: 0;
 }
 
 .newsletter__content {
@@ -692,6 +686,7 @@ a:hover {
   text-transform: uppercase;
   font-size: 2.6rem;
   margin-bottom: 2rem;
+  padding-top: 10rem;
 }
 
 .newsletter__body {
@@ -702,7 +697,7 @@ a:hover {
 
 .newsletter__input {
   width: 100%;
-  padding-bottom: 5rem;
+  padding-bottom: 10rem;
 }
 
 .newsletter__email {
@@ -837,6 +832,11 @@ a:hover {
   margin: 0 auto;
 }
 
+.contact__btn {
+  margin-top: 2rem;
+  border: 1px solid var(--color-about);
+}
+
 /*------------------------------------------------------
 # About
 ------------------------------------------------------ */
@@ -908,4 +908,13 @@ a:hover {
   .biography__grid {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+
+/*------------------------------------------------------
+# Shop
+------------------------------------------------------ */
+
+.shop {
+  width: 100%;
+  margin-top: 9rem;
 }
