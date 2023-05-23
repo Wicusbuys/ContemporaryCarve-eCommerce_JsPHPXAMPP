@@ -488,7 +488,7 @@ a:hover {
 
 .nav__icons {
   position: absolute;
-  right: 70px;
+  right: 60px;
   top: 20px;
 }
 
@@ -542,16 +542,10 @@ a:hover {
     margin: 0 auto;
   }
 
-  .nav__icon {
+  .nav__icons {
     position: relative;
     right: auto;
     top: auto;
-  }
-
-  .nav__icons {
-    position: absolute;
-    right: 70px;
-    top: 20px;
   }
 }
 
