@@ -456,34 +456,22 @@ a:hover {
 ------------------------------------------------------ */
 
 .nav {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  position: relative;
-  background-color: var(--color-background);
-  padding: 1rem;
-  font-size: 2rem;
   align-items: center;
+  background-color: var(--color-background);
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  justify-content: space-between;
+  padding: 1rem;
   position: fixed;
+  position: relative;
   top: 0;
-  z-index: 2;
   width: 100%;
+  z-index: 2;
 }
 
 .nav__logo {
   width: 150px;
-}
-
-.nav__list--mobile {
-  display: inline-block;
-}
-
-.nav__list--pc {
-  display: none;
-}
-
-.nav__icons {
-  padding: 0 0.5rem;
 }
 
 .nav__toggler {
@@ -495,6 +483,13 @@ a:hover {
 .nav__icon {
   width: 30px;
   height: 30px;
+  margin-left: 1rem;
+}
+
+.nav__icons {
+  position: absolute;
+  right: 70px;
+  top: 20px;
 }
 
 .nav__list {
@@ -520,7 +515,7 @@ a:hover {
   opacity: 60%;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1200px) {
   .nav__toggler {
     display: none;
   }
@@ -543,24 +538,20 @@ a:hover {
     transition: border-bottom 0.4s;
   }
 
-  .nav__list--mobile {
-    display: none;
-  }
-
-  .nav__list--pc {
-    display: inline-block;
-  }
-
   .nav__list {
     margin: 0 auto;
   }
 
-  .nav__icons {
-    padding: 0 1rem;
+  .nav__icon {
+    position: relative;
+    right: auto;
+    top: auto;
   }
 
-  .nav__icon {
-    justify-content: space-between;
+  .nav__icons {
+    position: absolute;
+    right: 70px;
+    top: 20px;
   }
 }
 
