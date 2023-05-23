@@ -459,6 +459,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  position: relative;
   background-color: var(--color-background);
   padding: 1rem;
   font-size: 2rem;
@@ -488,6 +489,7 @@ a:hover {
 .nav__toggler {
   width: 30px;
   height: 30px;
+  opacity: 1;
 }
 
 .nav__icon {
@@ -575,7 +577,7 @@ a:hover {
 
 .hero__image {
   display: block;
-  background-image: url(/images/HeroImage.webp);
+  background-image: url(../images/HeroImage.webp);
   aspect-ratio: 2.25;
   width: 100%;
   height: 100%;
@@ -675,7 +677,7 @@ a:hover {
 ------------------------------------------------------ */
 
 .newsletter {
-  background: url(/images/NewsletterImage.webp);
+  background: url(../images/NewsletterImage.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -844,6 +846,9 @@ a:hover {
 
 .contact__btn {
   margin-top: 2rem;
+  background-color: #454545;
+  color: var(--color-white);
+  width: 100%;
   border: 1px solid var(--color-about);
 }
 
@@ -864,6 +869,7 @@ a:hover {
 .about__img {
   width: 100%;
   height: 50vh;
+  object-position: center;
   object-fit: cover;
 }
 
