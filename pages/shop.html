@@ -14,6 +14,7 @@
     />
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/styles.css" />
+    <!-- <script src="../js/shop.js"></script> -->
   </head>
   <body>
     <header>
@@ -43,6 +44,28 @@
         </div>
       </nav>
     </header>
-    <section class="shop"></section>
+    <section class="shop">
+      <div class="shop__container">
+        <div class="listing__container">
+          <div class="listing__sidebar">
+            <h3 class="listing__header">Areas</h3>
+            <ul class="list listing__list">
+              <li class="listing__item">
+                <a href="" class="link">Dining</a>
+              </li>
+              <li class="listing__item"><a href="" class="link">Living</a></li>
+              <li class="listing__item"><a href="" class="link">Bedroom</a></li>
+              <li class="listing__item"><a href="" class="link">Outdoor</a></li>
+            </ul>
+          </div>
+          <div class="listing__content">
+            <h3 class="listing__header">Furniture</h3>
+            <div class="grid listing__grid" id="shopGrid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="../js/main.js"></script>
+    <script src="../js/diningProducts.js"></script>
   </body>
 </html>

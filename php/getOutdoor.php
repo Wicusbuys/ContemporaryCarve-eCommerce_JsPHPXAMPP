@@ -7,7 +7,7 @@ $conn = mysqli_connect("localhost", "root", "", "contemporarycarve");
 
 //Query the table
 
-$sql = "SELECT * FROM products LIMIT 4";
+$sql = "SELECT * FROM products WHERE product_Genre = 'Outdoor'";
 $result = $conn->query($sql);
 
 
