@@ -14,7 +14,6 @@
     />
     <link rel="stylesheet" href="../css/normalize.css" />
     <link rel="stylesheet" href="../css/styles.css" />
-    <!-- <script src="../js/shop.js"></script> -->
   </head>
   <body>
     <header>
@@ -51,11 +50,20 @@
             <h3 class="listing__header">Areas</h3>
             <ul class="list listing__list">
               <li class="listing__item">
-                <a href="" class="link">Dining</a>
+                <a href="" class="link" id="loadDiningProducts">Dining</a>
               </li>
-              <li class="listing__item"><a href="" class="link">Living</a></li>
-              <li class="listing__item"><a href="" class="link">Bedroom</a></li>
-              <li class="listing__item"><a href="" class="link">Outdoor</a></li>
+              <li class="listing__item">
+                <a href="" class="link" id="loadLivingProducts">Living</a>
+              </li>
+              <li class="listing__item">
+                <a href="" class="link" id="loadBedroomProducts">Bedroom</a>
+              </li>
+              <li class="listing__item">
+                <a href="" class="link" id="loadOutdoorProducts">Outdoor</a>
+              </li>
+              <li class="listing__item">
+                <a href="../pages/shop.html" class="link">View all</a>
+              </li>
             </ul>
           </div>
           <div class="listing__content">
@@ -66,6 +74,7 @@
       </div>
     </section>
     <script src="../js/main.js"></script>
-    <script src="../js/diningProducts.js"></script>
+    <script src="../js/shop.js"></script>
+    <script src="../js/event-handler.js"></script>
   </body>
 </html>

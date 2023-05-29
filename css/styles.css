@@ -788,6 +788,12 @@ a:hover {
   padding-bottom: 2rem;
 }
 
+.footer__link {
+  font-weight: normal;
+  color: var(--color-accent);
+  font-size: 1.4rem;
+}
+
 @media screen and (min-width: 768px) {
   .footer__about {
     padding: 1rem 2rem;
@@ -943,6 +949,7 @@ a:hover {
   flex-wrap: wrap;
   width: 100%;
   justify-content: space-evenly;
+  margin: auto 2rem;
 }
 
 .listing__item {
