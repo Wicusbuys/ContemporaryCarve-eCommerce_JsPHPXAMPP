@@ -23,6 +23,7 @@ if (mysqli_num_rows($result) > 0) {
     // Store the session token in the PHP session
     session_start();
     $_SESSION["sessionToken"] = $sessionToken;
+    $_SESSION["userEmail"] = $email;
 
     // Return the session token as a response
     $response = array(
