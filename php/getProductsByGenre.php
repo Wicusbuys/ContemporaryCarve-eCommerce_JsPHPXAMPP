@@ -1,15 +1,13 @@
 <?php
-
-//Connect to MySQL database
-
+// Connect to MySQL database
 $conn = mysqli_connect("localhost", "root", "", "contemporarycarve");
 
+// Get the product genre from the AJAX request
+$genre = $_GET['genre'];
 
-//Query the table
-
-$sql = "SELECT * FROM products WHERE product_Genre = 'Living'";
+// Query the table based on the product genre
+$sql = "SELECT * FROM products WHERE product_Genre = '$genre'";
 $result = $conn->query($sql);
-
 
 $data = array();
 

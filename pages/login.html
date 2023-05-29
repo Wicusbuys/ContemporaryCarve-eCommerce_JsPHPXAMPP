@@ -18,81 +18,86 @@
   <body>
     <header>
       <nav class="nav collapsible">
-        <a class="nav__logo" href="/pages/index.html"><img src="../images/logo.svg" alt="" /></a>
-            <svg class="icon nav__toggler">
-              <use xlink:href="../images/sprite.svg#burger"></use>
-            </svg>
+        <a class="nav__logo" href="/pages/index.html"
+          ><img src="../images/logo.svg" alt=""
+        /></a>
+        <svg class="icon nav__toggler">
+          <use xlink:href="../images/sprite.svg#burger"></use>
+        </svg>
         <ul class="list nav__list collapsible__content">
           <li class="nav__item"><a href="../pages/index.html">Home</a></li>
           <li class="nav__item"><a href="../pages/shop.html">Shop</a></li>
           <li class="nav__item"><a href="../pages/about.html">About</a></li>
           <li class="nav__item"><a href="../pages/contact.html">Contact</a></li>
         </ul>
-            <div class="nav__icons">
-              <svg class="icon nav__icon">
-                <use xlink:href="../images/sprite.svg#account"></use>
-              </svg>
-              <svg class="icon nav__icon">
-                <use xlink:href="../images/sprite.svg#search"></use>
-              </svg>
-              <svg class="icon nav__icon">
-                <use xlink:href="../images/sprite.svg#shoppingCart"></use>
-              </svg>
-            </div>
+        <div class="nav__icons">
+          <svg class="icon nav__icon">
+            <use xlink:href="../images/sprite.svg#account"></use>
+          </svg>
+          <svg class="icon nav__icon">
+            <use xlink:href="../images/sprite.svg#search"></use>
+          </svg>
+          <svg class="icon nav__icon">
+            <use xlink:href="../images/sprite.svg#shoppingCart"></use>
+          </svg>
+        </div>
       </nav>
     </header>
-    <div class="about__container">
-      <img
-        class="about__img"
-        src="../images/ContactHero.png"
-        alt=""
-      />
-    </div>
-    <section class="contact">
-      <h3>Contact</h3>
-      <div class="contact__info">
-        Enter your details and message below and we will get back to you.
-      </div>
-      <div class="contact__info">
-        Alternatively give us a call or send us a mail for a general or sales
-        enquiry.
-      </div>
-      <div class="contact__info">Office: 083 471 7822</div>
-      <div class="contact__info">Email: wicusbuys@gmail.com</div>
-      <div class="contact__info">Workshop visits by appointment only</div>
-      <div class="contact__info">
-        Workshop address: Kaapzicht Building, 9 Rogers St, Tyger Valley, Cape
-        Town, 7530
-      </div>
-      <form action="">
-        <div class="contact__inputs">
-          <div class="grid grid--1x2 contact__grid">
-            <div class="contact__input">
-              <input
-                type="text"
-                class="input contact__name"
-                placeholder="Name..."
-              />
-            </div>
-            <div class="contact__input">
-              <input
-                type="text"
-                class="input contact__email"
-                placeholder="Email..."
-              />
-            </div>
-          </div>
-          <div class="contact__input">
-            <textarea
-              class="input contact__message"
-              name="message"
-              cols="30"
-              rows="10"
-              placeholder="Your message..."
-            ></textarea>
-          </div>
-          <button class="btn contact__btn" type="submit">Submit</button>
-      </form>
+    <section class="login">
+      <div class="login__container">
+        <div class="login__tabs">
+          <button id="loginTab" class="active">Login</button>
+          <button id="signupTab">Sign Up</button>
+        </div>
+        <div id="loginForm" class="form">
+          <!-- Login form fields -->
+          <label for="username" class="login__label"
+            >Enter your e-mail and password:</label
+          >
+          <input
+            type="text"
+            id="username"
+            class="input form__input"
+            placeholder="Email..."
+            required
+          />
+          <input
+            type="password"
+            id="password"
+            class="input form__input"
+            placeholder="Password..."
+            required
+          />
+          <button id="loginBtn">Log In</button>
+        </div>
+        <div id="signupForm" class="form hidden">
+          <!-- Sign up form fields -->
+          <label for="newUsername" class="login__label"
+            >Register an e-mail and password:</label
+          >
+          <input
+            type="text"
+            id="newUsername"
+            class="input form__input"
+            placeholder="Email..."
+            required
+          />
+          <input
+            type="password"
+            id="newPassword"
+            class="input form__input"
+            placeholder="Password..."
+            required
+          />
+          <input
+            type="password"
+            id="confirmPassword"
+            class="input form__input"
+            placeholder="Confirm Password..."
+            required
+          />
+          <button id="signupBtn">Sign Up</button>
+        </div>
       </div>
     </section>
     <section class="footer">
@@ -136,5 +141,6 @@
       </div>
     </section>
     <script src="../js/nav.js"></script>
+    <script src="../js/login.js"></script>
   </body>
 </html>
