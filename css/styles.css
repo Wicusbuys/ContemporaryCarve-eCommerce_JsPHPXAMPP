@@ -118,7 +118,6 @@ p {
 a {
   text-decoration: none;
   transition: 0.3s;
-  padding-right: 4px;
 }
 
 a:hover {
@@ -456,6 +455,7 @@ a:hover {
   text-decoration: none;
   position: absolute;
   background-color: #f9f9f9;
+  border-radius: 10px;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   padding: 12px 16px;
@@ -465,6 +465,14 @@ a:hover {
 
 .nav__dropdown-content a {
   color: #000;
+}
+
+.dropdown-content__item {
+  display: block;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  line-height: 3rem;
+  border-bottom: 1px solid #dad7d7e9;
 }
 
 .nav__dropdown-content.show {

@@ -17,18 +17,23 @@ $query = "SELECT * FROM users WHERE user_email = '$email' AND user_password = '$
 $result = mysqli_query($conn, $query);
 
 if (mysqli_num_rows($result) > 0) {
+    // Fetch the user details
+    $row = mysqli_fetch_assoc($result);
+
     // Generate a session token
     $sessionToken = bin2hex(random_bytes(16));
 
     // Store the session token in the PHP session
     session_start();
     $_SESSION["sessionToken"] = $sessionToken;
-    $_SESSION["userEmail"] = $email;
+    $_SESSION["userEmail"] = $row["user_email"];
+    $_SESSION["userName"] = $row["user_name"];
 
     // Return the session token as a response
     $response = array(
         "success" => true,
-        "token" => $sessionToken
+        "token" => $sessionToken,
+        "userName" => $row["user_name"]
     );
     echo json_encode($response);
 } else {
