@@ -18,27 +18,30 @@
   <body>
     <header>
       <nav class="nav collapsible">
-        <a class="nav__logo" href="/pages/index.html"><img src="../images/logo.svg" alt="" /></a>
-            <svg class="icon nav__toggler">
-              <use xlink:href="../images/sprite.svg#burger"></use>
-            </svg>
+        <a class="nav__logo" href="/pages/index.html"
+          ><img src="../images/logo.svg" alt=""
+        /></a>
+        <svg class="icon nav__toggler">
+          <use xlink:href="../images/sprite.svg#burger"></use>
+        </svg>
         <ul class="list nav__list collapsible__content">
           <li class="nav__item"><a href="../pages/index.html">Home</a></li>
           <li class="nav__item"><a href="../pages/shop.html">Shop</a></li>
           <li class="nav__item"><a href="../pages/about.html">About</a></li>
           <li class="nav__item"><a href="../pages/contact.html">Contact</a></li>
         </ul>
-            <div class="nav__icons">
-              <svg class="icon nav__icon">
-                <use xlink:href="../images/sprite.svg#account"></use>
-              </svg>
-              <svg class="icon nav__icon">
-                <use xlink:href="../images/sprite.svg#search"></use>
-              </svg>
-              <svg class="icon nav__icon">
-                <use xlink:href="../images/sprite.svg#shoppingCart"></use>
-              </svg>
-            </div>
+        <div class="nav__icons">
+          <svg class="icon nav__icon account-icon">
+            <use xlink:href="../images/sprite.svg#account"></use>
+          </svg>
+          <div class="nav__dropdown-content">
+            <span id="userEmail"></span>
+            <a href="#" id="logoutBtn">Log Out</a>
+          </div>
+          <svg class="icon nav__icon">
+            <use xlink:href="../images/sprite.svg#shoppingCart"></use>
+          </svg>
+        </div>
       </nav>
     </header>
     <section class="about">

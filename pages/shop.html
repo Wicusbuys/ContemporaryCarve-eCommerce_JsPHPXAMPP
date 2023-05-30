@@ -31,12 +31,13 @@
           <li class="nav__item"><a href="../pages/contact.html">Contact</a></li>
         </ul>
         <div class="nav__icons">
-          <svg class="icon nav__icon">
+          <svg class="icon nav__icon account-icon">
             <use xlink:href="../images/sprite.svg#account"></use>
           </svg>
-          <svg class="icon nav__icon">
-            <use xlink:href="../images/sprite.svg#search"></use>
-          </svg>
+          <div class="nav__dropdown-content">
+            <span id="userEmail"></span>
+            <a href="#" id="logoutBtn">Log Out</a>
+          </div>
           <svg class="icon nav__icon">
             <use xlink:href="../images/sprite.svg#shoppingCart"></use>
           </svg>
