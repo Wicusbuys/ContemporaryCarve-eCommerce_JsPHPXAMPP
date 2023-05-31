@@ -1,16 +1,31 @@
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Event listeners for navbar functionality
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+///////////////////////////////////////////////////////////////////////////
+// Burger menu functionality for mobile view
+///////////////////////////////////////////////////////////////////////////
 const collapsibles = document.querySelectorAll(".collapsible");
 collapsibles.forEach((item) =>
-  item.addEventListener("click", function () {
-    this.classList.toggle("collapsible--expanded");
+  item.addEventListener("click", function (event) {
+    if (!event.target.closest(".nav__icons")) {
+      this.classList.toggle("collapsible--expanded");
+    }
   })
 );
-
+///////////////////////////////////////////////////////////////////////////
+// account functionality to toggle account info window
+///////////////////////////////////////////////////////////////////////////
 const accountIcon = document.querySelector(".account-icon");
 const dropdownContent = document.querySelector(".nav__dropdown-content");
 
 accountIcon.addEventListener("click", function () {
   dropdownContent.classList.toggle("show");
 });
+
+///////////////////////////////////////////////////////////////////////////
+// account functionality to show logged in users name, email and log out option in account info window
+///////////////////////////////////////////////////////////////////////////
 
 document.addEventListener("DOMContentLoaded", function () {
   // Check if a session token exists
@@ -24,8 +39,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (sessionToken) {
     // Set the user email in the span
-    userEmailElement.textContent =
-      "Weclome back: " + userName + "\n" + userEmail;
+    userEmailElement.innerHTML =
+      "Welcome back: " +
+      "<strong>" +
+      userName +
+      "</strong>" +
+      "<br>" +
+      "<strong>" +
+      userEmail +
+      "</strong>";
 
     // Change the button text to "Log Out"
     logOutInBtn.textContent = "Log Out";
