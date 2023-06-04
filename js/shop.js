@@ -9,7 +9,20 @@ document.addEventListener("DOMContentLoaded", function () {
   if (window.location.pathname.includes("index.html")) {
     loadBestProducts();
   } else if (window.location.pathname.includes("shop.html")) {
-    loadAllProducts();
+    const urlParams = new URLSearchParams(window.location.search);
+    const spaceId = urlParams.get("id");
+
+    if (spaceId === "Dining") {
+      loadProductsByGenre("Dining", event);
+    } else if (spaceId === "Living") {
+      loadProductsByGenre("Living", event);
+    } else if (spaceId === "Bedroom") {
+      loadProductsByGenre("Bedroom", event);
+    } else if (spaceId === "Outdoor") {
+      loadProductsByGenre("Outdoor", event);
+    } else {
+      loadAllProducts();
+    }
   }
 });
 ///////////////////////////////////////////////////////////////////////////

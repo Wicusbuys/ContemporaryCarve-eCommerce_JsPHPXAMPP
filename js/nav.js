@@ -1,5 +1,5 @@
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-// Event listeners for navbar functionality
+// Event listeners
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////////////
@@ -90,3 +90,64 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+
+///////////////////////////////////////////////////////////////////////////
+// Newsletter subscibe button if exists
+///////////////////////////////////////////////////////////////////////////
+const newsletterSubBtn = document.getElementById("newsletterBtn");
+if (newsletterSubBtn) {
+  newsletterSubBtn.addEventListener("click", function () {
+    newsletterSubEntry();
+  });
+}
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Functions
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+function newsletterSubEntry() {
+  const newsletterInput = document.getElementById("newsletterInput");
+  const email = newsletterInput.value;
+  // Create an object with the user credentials
+  const userCredentials = {
+    user_email: email,
+  };
+
+  // Send a POST request to the addNewSubscriber.php script with the user credentials
+  fetch("../php/addNewSubscriber.php", {
+    method: "POST",
+    body: JSON.stringify(userCredentials),
+    headers: {
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error("Network response was not ok");
+      }
+    })
+    .then((data) => {
+      // Create and display the custom alert
+      const customAlert = document.createElement("div");
+      customAlert.classList.add("custom-alert");
+      if (data.success) {
+        // Show a success message
+        customAlert.textContent =
+          "Subscription successful. Thank you for joining!";
+      } else {
+        // Show an alert for existing email
+        customAlert.textContent = data.message;
+      }
+      document.body.appendChild(customAlert);
+
+      const duration = 2000; // Set the duration in milliseconds (e.g., 3000ms = 3 seconds)
+      setTimeout(function () {
+        customAlert.remove();
+      }, duration);
+    })
+    .catch((error) => {
+      alert("An error occurred during subscription. Please try again later.");
+    });
+}

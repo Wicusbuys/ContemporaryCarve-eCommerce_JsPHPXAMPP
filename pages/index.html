@@ -18,7 +18,7 @@
   <body>
     <header>
       <nav class="nav collapsible">
-        <a class="nav__logo" href="/pages/index.html"
+        <a class="nav__logo" href="../pages/index.html"
           ><img src="../images/logo.svg" alt=""
         /></a>
         <svg class="icon nav__toggler">
@@ -59,18 +59,21 @@
     <heading class="block__heading">
       <h3 class="small--about__heading">Contemporary Carve</h3>
       <p class="small--about__body">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi velit
-        veritatis voluptates distinctio totam libero laudantium error? Asperiores,
-        non repellat.
+        Contemporary Carve, an acclaimed furniture manufacturer located
+         in South Africa, combines cutting-edge technology with traditional
+          woodworking methods and timeless design. Our mission is to craft
+           meticulously constructed pieces that ignite inspiration and endure
+            for generations. We firmly believe that furniture possesses the
+             power to transform the world and revolutionize our way of life.
       </p>
-      <a href="" class="link small--about__link"
+      <a href="../pages/about.html" class="link small--about__link"
         >Get to know us <i class="link-arrow"></i
       ></a>
     </heading>
   </section>
   <section class="space--Section">
     <div class="container grid grid--1x2">
-      <div class="space">
+      <div class="space" id="Dining" onclick="loadShopPage('Dining')">
         <img class="space__image" src="../images/DiningImage.webp" alt="">
           <div class="space__body">
             <header class="space__header">Dining</header>
@@ -80,7 +83,7 @@
           </div>
         </img>
       </div>
-      <div class="space">
+      <div class="space" id="Living" onclick="loadShopPage('Living')">
         <img class="space__image" src="../images/LivingImage.webp" alt="">
           <div class="space__body">
             <header class="space__header">Living</header>
@@ -90,7 +93,7 @@
           </div>
         </img>
       </div>
-      <div class="space">
+      <div class="space" id="Bedroom" onclick="loadShopPage('Bedroom')">
         <img class="space__image" src="../images/BedroomImage.webp" alt="">
           <div class="space__body">
             <header class="space__header">Bedroom</header>
@@ -100,7 +103,7 @@
           </div>
         </img>
       </div>
-      <div class="space">
+      <div class="space" id="Outdoor" onclick="loadShopPage('Outdoor')">
         <img class="space__image" src="../images/OutdoorImage.webp" alt="">
           <div class="space__body">
             <header class="space__header">Outdoor</header>
@@ -117,13 +120,14 @@
       <heading class="block__heading">
         <h3 class="newsletter__heading">Contemporary Carve</h3>
         <p class="newsletter__body">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi velit
-          veritatis voluptates distinctio totam libero laudantium error? Asperiores,
-          non repellat.
+          Subscribe to Contemporary Carve for updates on new releases, events,
+           and our journey as pioneers of sustainable, African design.
+            Join us as we redefine contemporary craftsmanship and elevate
+             woodworking to new heights.
         </p>
       <div class="newsletter__input">
-        <input type="text" class="input newsletter__email" placeholder="Email..." />
-        <button class="btn newsletter__btn">Submit</button>
+        <input type="text" class="input newsletter__email" placeholder="Email..." id="newsletterInput" />
+        <button class="btn newsletter__btn" id="newsletterBtn">Subscribe</button>
       </div>
             </div>
     </div>
@@ -138,10 +142,12 @@
     <div class="footer__about">
       <h3 class="footer__about--heading">The Contemporary carve way</h3>
       <p class="footer__about--body">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita vitae
-        laudantium dolores nostrum eos quis enim voluptas optio amet
-        voluptatibus ea dicta iusto ab consequatur, illo rem, voluptatem alias
-        incidunt?
+        Contemporary Carve, an acclaimed furniture manufacturer located
+         in South Africa, combines cutting-edge technology with traditional
+          woodworking methods and timeless design. Our mission is to craft
+           meticulously constructed pieces that ignite inspiration and endure
+            for generations. We firmly believe that furniture possesses the
+             power to transform the world and revolutionize our way of life.
       </p>
       <div class="footer__about--icons">
         <svg class="icon footer__about--icon">
@@ -158,10 +164,10 @@
     <div class="footer__products">
       <h3 class="footer__products--heading">Products</h3>
       <ul class="list list--vertical footer__products--list">
-        <li class="list__item footer__products--list__item"><a href="../pages/shop.html" class="link footer__link">Dining</a></li>
-        <li class="list__item footer__products--list__item"><a href="../pages/shop.html" class="link footer__link">Living</a></li>
-        <li class="list__item footer__products--list__item"><a href="../pages/shop.html" class="link footer__link">Bedroom</a></li>
-        <li class="list__item footer__products--list__item"><a href="../pages/shop.html" class="link footer__link">Outdoor</a></li>
+        <li class="list__item footer__products--list__item"><a href="../pages/shop.html?id=Dining" class="link footer__link">Dining</a></li>
+        <li class="list__item footer__products--list__item"><a href="../pages/shop.html?id=Living" class="link footer__link">Living</a></li>
+        <li class="list__item footer__products--list__item"><a href="../pages/shop.html?id=Bedroom" class="link footer__link">Bedroom</a></li>
+        <li class="list__item footer__products--list__item"><a href="../pages/shop.html?id=Outdoor" class="link footer__link">Outdoor</a></li>
       </ul>
     </div>
     <div class="footer__company">
@@ -174,6 +180,7 @@
   </div>
 </section>
   <script src="../js/nav.js"></script>
+  <script src="../js/main.js"></script>
   <script src="../js/shop.js"></script>
   </body>
 </html>
