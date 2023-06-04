@@ -247,8 +247,17 @@ function addToCart(productId) {
   // Store the updated cart data in local storage
   localStorage.setItem("cart", JSON.stringify(cart));
 
-  // Optionally, display a success message or update the cart UI
-  alert("Item added to cart!");
+  // Create and display the custom alert
+  const customAlert = document.createElement("div");
+  customAlert.classList.add("custom-alert");
+  customAlert.textContent = "Item added to cart!";
+  document.body.appendChild(customAlert);
+
+  // Set a timeout to remove the custom alert after a certain duration
+  const duration = 2000; // Set the duration in milliseconds (e.g., 3000ms = 3 seconds)
+  setTimeout(function () {
+    customAlert.remove();
+  }, duration);
 }
 
 ///////////////////////////////////////////////////////////////////////////

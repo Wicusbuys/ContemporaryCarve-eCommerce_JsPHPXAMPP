@@ -959,6 +959,24 @@ a:hover {
   border-top: 1px solid var(--color-borders);
 }
 
+.custom-alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  font-weight: bold;
+  background-color: #f8f8f8;
+  color: #000;
+  border: 2px solid #2fcf0f;
+  padding: 10px;
+  text-align: center;
+  z-index: 9999;
+}
+
+.custom-alert.show {
+  opacity: 1;
+}
+
 /*------------------------------------------------------
 # Listing
 ------------------------------------------------------ */
