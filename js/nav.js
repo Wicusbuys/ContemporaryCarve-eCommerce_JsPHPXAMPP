@@ -24,6 +24,19 @@ accountIcon.addEventListener("click", function () {
 });
 
 ///////////////////////////////////////////////////////////////////////////
+// cart functionality to go to cart page
+///////////////////////////////////////////////////////////////////////////
+const shopIcon = document.querySelector(".nav__icon.shop-icon");
+shopIcon.addEventListener("click", function () {
+  const sessionToken = localStorage.getItem("sessionToken");
+  if (sessionToken) {
+    window.location.href = "../pages/cart.html";
+  } else {
+    window.location.href = "../pages/login.html";
+  }
+});
+
+///////////////////////////////////////////////////////////////////////////
 // account functionality to show logged in users name, email and log out option in account info window
 ///////////////////////////////////////////////////////////////////////////
 

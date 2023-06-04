@@ -34,67 +34,22 @@
           <svg class="icon nav__icon account-icon">
             <use xlink:href="../images/sprite.svg#account"></use>
           </svg>
+          <div class="nav__dropdown-content">
+            <span id="userEmail" class="dropdown-content__item"></span>
+            <a href="#" id="logOutInBtn" class="dropdown-content__item"
+              >Log in
+            </a>
+          </div>
           <svg class="icon nav__icon shop-icon">
             <use xlink:href="../images/sprite.svg#shoppingCart"></use>
           </svg>
         </div>
       </nav>
     </header>
-    <section class="login">
-      <div class="login__container">
-        <div class="login__tabs">
-          <button id="loginTab" class="active">Login</button>
-          <button id="signupTab">Sign Up</button>
-        </div>
-        <div id="loginForm" class="form">
-          <!-- Login form fields -->
-          <label for="user_email" class="login__label"
-            >Enter your e-mail and password:</label
-          >
-          <input
-            type="text"
-            id="user_email"
-            class="input form__input"
-            placeholder="Email..."
-            required
-          />
-          <input
-            type="password"
-            id="user_password"
-            class="input form__input"
-            placeholder="Password..."
-            required
-          />
-          <button id="loginBtn">Log In</button>
-        </div>
-        <div id="signupForm" class="form hidden">
-          <!-- Sign up form fields -->
-          <label for="newUserEmail" class="login__label"
-            >Register an e-mail and password:</label
-          >
-          <input
-            type="text"
-            id="signup_email"
-            class="input form__input"
-            placeholder="Email..."
-            required
-          />
-          <input
-            type="password"
-            id="signup_password"
-            class="input form__input"
-            placeholder="Password..."
-            required
-          />
-          <input
-            type="password"
-            id="confirm_password"
-            class="input form__input"
-            placeholder="Confirm Password..."
-            required
-          />
-          <button id="signupBtn">Sign Up</button>
-        </div>
+    <section class="cart" id="cart">
+      <div class="cart__container">
+        <h3 class="cart__header">Shopping Cart:</h3>
+        <div class="cart__contents" id="cartContents"></div>
       </div>
     </section>
     <section class="footer">
@@ -122,22 +77,36 @@
         <div class="footer__products">
           <h3 class="footer__products--heading">Products</h3>
           <ul class="list list--vertical footer__products--list">
-            <li class="list__item footer__products--list__item">Dining</li>
-            <li class="list__item footer__products--list__item">Living</li>
-            <li class="list__item footer__products--list__item">Bedroom</li>
-            <li class="list__item footer__products--list__item">Outdoor</li>
+            <li class="list__item footer__products--list__item">
+              <a href="../pages/shop.html" class="link footer__link">Dining</a>
+            </li>
+            <li class="list__item footer__products--list__item">
+              <a href="../pages/shop.html" class="link footer__link">Living</a>
+            </li>
+            <li class="list__item footer__products--list__item">
+              <a href="../pages/shop.html" class="link footer__link">Bedroom</a>
+            </li>
+            <li class="list__item footer__products--list__item">
+              <a href="../pages/shop.html" class="link footer__link">Outdoor</a>
+            </li>
           </ul>
         </div>
         <div class="footer__company">
-          <h3 class="footer__company--heading">Products</h3>
+          <h3 class="footer__company--heading">Details</h3>
           <ul class="list list--vertical footer__company--list">
-            <li class="list__item footer__company--list__item">About</li>
-            <li class="list__item footer__company--list__item">Contact</li>
+            <li class="list__item footer__company--list__item">
+              <a href="../pages/about.html" class="link footer__link">About</a>
+            </li>
+            <li class="list__item footer__company--list__item">
+              <a href="../pages/contact.html" class="link footer__link"
+                >Contact</a
+              >
+            </li>
           </ul>
         </div>
       </div>
     </section>
+    <script src="../js/cart.js"></script>
     <script src="../js/nav.js"></script>
-    <script src="../js/login.js"></script>
   </body>
 </html>
