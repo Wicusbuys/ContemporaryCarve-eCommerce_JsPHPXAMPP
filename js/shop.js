@@ -105,7 +105,7 @@ function loadBestProducts() {
         <img class="tile__image" src="${productImage}" alt=""/>
         <div class="tile__info">
             <header class="tile__header">${productName}</header>
-            <div class="tile__price">${productPrice}</div>
+            <div class="tile__price">R${productPrice}</div>
         </div>
         <div class="tile__icon">
             <svg class="icon">
@@ -153,7 +153,7 @@ function loadAllProducts() {
             <img class="tile__image" src="${productImage}" alt=""/>
             <div class="tile__info">
               <header class="tile__header">${productName}</header>
-              <div class="tile__price">${productPrice}</div>
+              <div class="tile__price">R${productPrice}</div>
             </div>
             <div class="tile__icon">
               <svg class="icon">

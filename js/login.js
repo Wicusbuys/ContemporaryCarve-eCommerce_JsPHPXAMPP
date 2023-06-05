@@ -72,6 +72,7 @@ function login(event) {
         localStorage.setItem("userEmail", email);
         localStorage.setItem("sessionToken", token);
         localStorage.setItem("userName", data.userName); // Store the userName
+        localStorage.setItem("userID", data.userID); // Store the userName
 
         // Redirect to index.html upon successful login
         window.location.href = "../pages/index.html";

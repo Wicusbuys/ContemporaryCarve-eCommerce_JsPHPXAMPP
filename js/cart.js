@@ -8,7 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const cartData = localStorage.getItem("cart");
   if (cartData) {
     loadCartContents();
-    addCheckoutBox();
+    setTimeout(function () {
+      // Code to be executed after the delay to ensure total updates
+      addCheckoutBox();
+    }, 500);
   } else {
     loadMessage();
   }
@@ -24,61 +27,84 @@ function loadCartContents() {
   const cartData = localStorage.getItem("cart");
 
   if (cartData) {
+    var total = 0;
     const cartContent = document.getElementById("cartContents");
     cartContent.innerHTML = "";
 
-    // Make an AJAX request for each product in the cart
     const cartItems = JSON.parse(cartData);
+    const promises = [];
+
     for (const id of cartItems) {
-      const xhr = new XMLHttpRequest();
-      xhr.open("GET", `../php/getCartProducts.php?id=${id}`, true);
-      xhr.setRequestHeader("Content-Type", "application/json");
+      const promise = new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", `../php/getCartProducts.php?id=${id}`, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
 
-      xhr.onload = function () {
-        if (xhr.status === 200) {
-          const product = JSON.parse(xhr.responseText);
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            const product = JSON.parse(xhr.responseText);
+            total = total + parseFloat(product[0].product_Price);
 
-          // Generate HTML for the cart item
-          const cartProduct = document.createElement("div");
-          cartProduct.classList.add("cartProduct");
-          cartProduct.dataset.productId = product[0].product_ID;
+            const cartProduct = document.createElement("div");
+            cartProduct.classList.add("cartProduct");
+            cartProduct.dataset.productId = product[0].product_ID;
 
-          const image = document.createElement("img");
-          image.classList.add("cartProduct__image");
-          image.src = product[0].product_Img;
-          image.alt = "";
+            const image = document.createElement("img");
+            image.classList.add("cartProduct__image");
+            image.src = product[0].product_Img;
+            image.alt = "";
 
-          const body = document.createElement("div");
-          body.classList.add("cartProduct__body");
+            const body = document.createElement("div");
+            body.classList.add("cartProduct__body");
 
-          const productNameRow = createProductDataRow(
-            "Product:",
-            product[0].product_Name
-          );
-          const productPriceRow = createProductDataRow(
-            "Price:",
-            product[0].product_Price
-          );
+            const productNameRow = createProductDataRow(
+              "Product:",
+              product[0].product_Name
+            );
+            const productPriceRow = createProductDataRow(
+              "Price:",
+              "R" + product[0].product_Price
+            );
 
-          const removeButton = document.createElement("button");
-          removeButton.classList.add("btn", "cartProduct__btn", "removeBtn");
-          removeButton.textContent = "Remove Item";
+            const removeButton = document.createElement("button");
+            removeButton.classList.add("btn", "cartProduct__btn", "removeBtn");
+            removeButton.textContent = "Remove Item";
 
-          body.appendChild(productNameRow);
-          body.appendChild(productPriceRow);
-          body.appendChild(removeButton);
+            body.appendChild(productNameRow);
+            body.appendChild(productPriceRow);
+            body.appendChild(removeButton);
 
-          cartProduct.appendChild(image);
-          cartProduct.appendChild(body);
+            cartProduct.appendChild(image);
+            cartProduct.appendChild(body);
 
-          cartContent.appendChild(cartProduct);
+            cartContent.appendChild(cartProduct);
 
-          enableRemoveFromCart(removeButton); // Pass the remove button to the enableRemoveFromCart function
-        }
-        // enableRemoveFromCart();
-      };
-      xhr.send();
+            enableRemoveFromCart(removeButton);
+
+            resolve(); // Resolve the promise when the AJAX request is successful
+          } else {
+            reject(xhr.statusText); // Reject the promise if there's an error
+          }
+        };
+
+        xhr.onerror = function () {
+          reject(xhr.statusText); // Reject the promise if there's an error
+        };
+
+        xhr.send();
+      });
+
+      promises.push(promise);
     }
+
+    // Wait for all promises to resolve
+    Promise.all(promises)
+      .then(() => {
+        localStorage.setItem("CartTotal", total);
+      })
+      .catch((error) => {
+        console.error("Error loading cart contents:", error);
+      });
   }
 }
 
@@ -124,33 +150,63 @@ function enableRemoveFromCart(removeButton) {
 //Function to Remove selected item from cart
 //*************************************************************************
 function removeCartItem(productId) {
-  // Retrieve the existing cart data from local storage
   const cartData = localStorage.getItem("cart");
   let cart = [];
 
-  // If cart data exists, parse it from JSON and assign it to the cart variable
   if (cartData) {
     cart = JSON.parse(cartData);
   }
 
-  // Find the index of the product ID in the cart
   const index = cart.findIndex((id) => id === productId);
-  console.log(index);
 
-  // Remove the first occurrence of the product ID from the cart
   if (index !== -1) {
     cart.splice(index, 1);
   }
 
-  // Store the updated cart data in local storage
   localStorage.setItem("cart", JSON.stringify(cart));
 
   if (cart.length === 0) {
     clearCart();
-  }
+  } else {
+    const promises = [];
 
-  // Reload the cart to show the updated contents
-  window.location.href = "../pages/cart.html";
+    for (const id of cart) {
+      const promise = new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", `../php/getCartProducts.php?id=${id}`, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            const product = JSON.parse(xhr.responseText);
+            resolve(parseFloat(product[0].product_Price));
+          } else {
+            reject(xhr.statusText);
+          }
+        };
+
+        xhr.onerror = function () {
+          reject(xhr.statusText);
+        };
+
+        xhr.send();
+      });
+
+      promises.push(promise);
+    }
+
+    Promise.all(promises)
+      .then((prices) => {
+        const total = prices.reduce((acc, curr) => acc + curr, 0);
+        localStorage.setItem("CartTotal", total);
+
+        // Reload the cart to show the updated contents and total
+        window.location.href = "../pages/cart.html";
+      })
+      .catch((error) => {
+        console.error("Error updating cart total:", error);
+      });
+  }
 }
 
 ///////////////////////////////////////////////////////////////////////////
@@ -159,13 +215,15 @@ function removeCartItem(productId) {
 function addCheckoutBox() {
   const cartContent = document.querySelector(".cart__container");
 
+  const total = localStorage.getItem("CartTotal");
+
   const checkout = document.createElement("div");
   checkout.classList.add("checkout");
   checkout.innerHTML = `
   
       <div class="checkout__row">
       <p class="checkout__label">Total:</p>
-      <p class="checkout__value">R231212,38</p>
+      <p class="checkout__value">R${total}</p>
     </div>
     <div class="checkout__row">
       <button class="btn checkout__btn" id="checkout--remove">
@@ -229,6 +287,7 @@ function enableCheckoutBtn() {
 
 function clearCart() {
   localStorage.removeItem("cart");
+  localStorage.removeItem("CartTotal");
   console.log("Cart cleared");
   window.location.href = "../pages/cart.html";
 }

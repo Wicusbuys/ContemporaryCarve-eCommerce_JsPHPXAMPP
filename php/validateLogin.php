@@ -26,6 +26,7 @@ if (mysqli_num_rows($result) > 0) {
     // Store the session token in the PHP session
     session_start();
     $_SESSION["sessionToken"] = $sessionToken;
+    $_SESSION["userID"] = $row["user_ID"];
     $_SESSION["userEmail"] = $row["user_Email"];
     $_SESSION["userName"] = $row["user_Name"];
 
@@ -33,6 +34,7 @@ if (mysqli_num_rows($result) > 0) {
     $response = array(
         "success" => true,
         "token" => $sessionToken,
+        "userID" => $row["user_ID"],
         "userName" => $row["user_Name"]
     );
     echo json_encode($response);
