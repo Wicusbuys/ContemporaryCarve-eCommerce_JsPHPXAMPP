@@ -6,11 +6,17 @@ $conn = mysqli_connect("localhost", "root", "", "contemporarycarve");
 // Get the user credentials from the POST request
 $data = json_decode(file_get_contents("php://input"), true);
 $email = $data["user_email"];
+$name = $data["user_name"];
 $password = $data["user_password"];
+$phone = $data["user_phone"];
+$address = $data["user_address"];
 
 // Escape the user input to prevent SQL injection
 $email = mysqli_real_escape_string($conn, $email);
+$name = mysqli_real_escape_string($conn, $name);
 $password = mysqli_real_escape_string($conn, $password);
+$phone = mysqli_real_escape_string($conn, $phone);
+$address = mysqli_real_escape_string($conn, $address);
 
 // Check if a user with the same email already exists
 $query = "SELECT * FROM users WHERE user_email = '$email'";
@@ -25,7 +31,7 @@ if (mysqli_num_rows($result) > 0) {
     echo json_encode($response);
 } else {
     // Insert the new user credentials into the database
-    $insertQuery = "INSERT INTO users (user_email, user_password) VALUES ('$email', '$password')";
+    $insertQuery = "INSERT INTO users (user_Name, user_Email, user_Password, user_Phone, user_ShipAddress) VALUES ('$name', '$email', '$password', '$phone', '$address')";
     $insertResult = mysqli_query($conn, $insertQuery);
 
     if ($insertResult) {

@@ -44,8 +44,8 @@ function login(event) {
 
   // Create an object with the user credentials
   const userCredentials = {
-    user_email: email,
-    user_password: password,
+    user_Email: email,
+    user_Password: password,
   };
 
   // Send a POST request to the validateLogin.php script with the user credentials
@@ -94,11 +94,17 @@ function signup() {
 
   // Get the user input from the form
   const emailInput = document.getElementById("signup_email");
+  const nameInput = document.getElementById("signup_name");
   const passwordInput = document.getElementById("signup_password");
   const confirmPasswordInput = document.getElementById("confirm_password");
+  const phoneInput = document.getElementById("signup_phone");
+  const addressInput = document.getElementById("signup_address");
   const email = emailInput.value;
+  const name = nameInput.value;
   const password = passwordInput.value;
   const confirmPassword = confirmPasswordInput.value;
+  const phone = phoneInput.value;
+  const address = addressInput.value;
 
   // Check if passwords match
   if (password !== confirmPassword) {
@@ -109,7 +115,10 @@ function signup() {
   // Create an object with the user credentials
   const userCredentials = {
     user_email: email,
+    user_name: name,
     user_password: password,
+    user_phone: phone,
+    user_address: address,
   };
 
   // Send a POST request to the validateSignup.php script with the user credentials
@@ -134,8 +143,11 @@ function signup() {
 
         // Clear the input fields
         emailInput.value = "";
+        nameInput.value = "";
         passwordInput.value = "";
         confirmPasswordInput.value = "";
+        phoneInput.value = "";
+        addressInput.value = "";
 
         // Switch to the login form
         showLoginForm();
